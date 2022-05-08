@@ -1,0 +1,169 @@
+<!-- 23-3 What is DOM (Document Object Model) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="body">
+    <header>
+        <h1>welcome to my blog website</h1>
+    </header>
+
+    <main>
+        <section id="section">
+            <header>
+                <h2>Blog List </h2>
+                <ul id="blog-list">
+                    <li>Blog-1</li>
+                    <li>Blog-2</li>
+                    <li>Blog-3</li>
+                    <li>Blog-4</li>
+                </ul>
+            </header>
+            <article class="blog">
+                <h3 id="fast-title">My Awesome Blog-1</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit vel vero error mollitia sint voluptatum rem dicta ut quasi fuga dolorum, adipisci, numquam aliquid itaque eius, cum asperiores velit dignissimos! Vel impedit similique ea,
+                    in id, exercitationem tempore dolor recusandae enim illum odit veniam cum sed neque reprehenderit maiores doloribus.</p>
+            </article>
+            <article class="blog">
+                <h3 id="second-title">My Awesome Blog-2</h3>
+                <p>Blanditiis eius assumenda accusantium corrupti consequuntur quaerat vel, commodi quae atque. Harum beatae, iure a distinctio non esse tempora maxime molestiae illum rerum, officiis praesentium repudiandae cumque quis impedit temporibus
+                    porro! Consequatur, placeat modi, voluptates maxime sunt natus ratione suscipit eaque sed nemo aliquid, incidunt ea doloribus rem. A, unde.</p>
+            </article>
+            <article class="blog">
+                <h3 id="third-title">My Awesome Blog-3</h3>
+                <p>Reprehenderit sunt neque quis placeat culpa nisi facilis quae, atque, voluptatibus id doloribus dolore iusto fugit laudantium fugiat quod! Nostrum animi corrupti labore beatae sunt ipsum aperiam, nisi rem ullam. Laboriosam veritatis ipsum
+                    in ad blanditiis? Doloremque adipisci natus atque nulla nam, maxime assumenda possimus cupiditate recusandae eligendi impedit excepturi.</p>
+            </article>
+
+            <article class="blog">
+                <h3 id="fourth-title">My Awesome Blog-4</h3>
+                <p>Reprehenderit sunt neque quis placeat culpa nisi facilis quae, atque, voluptatibus id doloribus dolore iusto fugit laudantium fugiat quod! Nostrum animi corrupti labore beatae sunt ipsum aperiam, nisi rem ullam. Laboriosam veritatis ipsum
+                    in ad blanditiis? Doloremque adipisci natus atque nulla nam, maxime assumenda possimus cupiditate recusandae eligendi impedit excepturi.</p>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        // console.log(document.body);
+        const blogTitle = document.getElementsByTagName('h3');
+        // amara 1ta for of calabo r ta hole kaj korebe na 
+        for (const h3 of blogTitle) {
+            // console.log(h3.innerText);
+        }
+
+        const blogPar = document.getElementsByTagName("p");
+        for (const p of blogPar) {
+            // console.log(p);
+        }
+        // explore getElementById
+
+        const bodySize = document.getElementById('body');
+        bodySize.style.margin = '50px';
+        bodySize.style.marginBlock = '0px'
+            // 1st blog 
+        const fastTitle = document.getElementById('fast-title');
+        fastTitle.style.textAlign = 'center';
+        fastTitle.style.color = 'green';
+        fastTitle.style.backgroundColor = 'yellow';
+        fastTitle.style.borderRadius = '50px';
+        fastTitle.style.padding = "20px";
+
+
+        // 2nd blog 
+        const secondTitle = document.getElementById('second-title');
+        secondTitle.style.textAlign = 'center';
+        secondTitle.style.color = "green";
+        secondTitle.style.backgroundColor = 'yellow';
+        secondTitle.style.borderRadius = '50px';
+        secondTitle.style.padding = "20px";
+        secondTitle.innerText = 'Title Updated By JavaScript';
+
+        // 3rd blog  
+        const thirdTitle = document.getElementById('third-title');
+        thirdTitle.style.textAlign = 'center';
+        thirdTitle.style.color = "green";
+        thirdTitle.style.backgroundColor = 'yellow';
+        thirdTitle.style.borderRadius = '50px';
+        thirdTitle.style.padding = "20px";
+        // thirdTitle.innerText = 'Title Updated By JavaScript';
+
+        // 4th blog 
+
+        const fourthTitle = document.getElementById('fourth-title');
+        fourthTitle.style.textAlign = 'center';
+        fourthTitle.style.color = "green";
+        fourthTitle.style.backgroundColor = 'yellow';
+        fourthTitle.style.borderRadius = '50px';
+        fourthTitle.style.padding = "20px";
+
+
+
+        // create html element and appenchild
+        // কোন Element যোগ করতে হব
+        const li = document.createElement('li');
+        // innertext set korte hobe 
+        li.innerText = 'Blog-5';
+        // কো থাইে এড করতে হবে তা সেট করতে হবে
+        const ul = document.getElementById('blog-list');
+        // কার appenchild  হিসেবে যোগ হবে তা সেট করতে হবে
+        ul.appendChild(li);
+
+        // add article
+        const article = document.createElement('article');
+        article.classList.add('blog');
+        // h3 Element add korbo 
+        const h3 = document.createElement('h3');
+        // h3 innerText set korbo 
+        h3.innerText = 'My Awesome Blog 5';
+        h3.style.textAlign = 'center';
+        h3.style.color = 'brown';
+        h3.style.backgroundColor = 'yellow';
+        h3.style.borderRadius = '50px';
+        h3.style.padding = "20px";
+        // aragraph add korbo 
+        const p = document.createElement('p');
+
+        // p innerText set korbo 
+        p.innerText = 'the brown fox jumps over the lazy dog the brown fox jumps over the lazy dog the brown fox jumps over the lazy dog the brown fox jumps over the lazy dog the brown fox jumps over the lazy dog the brown fox jumps over the lazy dog the brown fox jumps over the lazy dog the brown fox jumps over the lazy dog the brown fox jumps over the lazy dog the brown fox jumps over the lazy dog the brown fox jumps over the lazy dog the brown fox jumps over the lazy dog the brown fox jumps over the lazy dog ';
+        // amra innerHtml diye try korbo 
+        // article.innerHTML = `<p>the brown fox jumps over the lazy dog the brown fox jumps over the lazy dog the brown fox jumps over the lazy dog the brown fox jumps over the lazy dog the brown fox jumps over the lazy dog the brown fox jumps over the lazy dog the brown fox jumps over the lazy dog the brown fox jumps over the lazy dog the brown fox jumps over the lazy dog the brown fox jumps over the lazy dog the brown fox jumps over the lazy dog
+        //     </p>`
+        p.style.color = 'red';
+        p.style.backgroundColor = 'green';
+        p.style.padding = '20px';
+        p.style.borderRadius = '30px';
+        article.appendChild(h3);
+        article.appendChild(p);
+        // এই article  কার ‍appenchild  হিসেবে সেট তা আগে সেট করতে হবে তানাহলে website দেখাবে না
+        // article of parent 
+        const articleSection = document.getElementById('section');
+        articleSection.appendChild(article);
+
+
+        // website e my awesome blog 5 show korbe kintu kono style hobe na karon javascript age je code run korano hoi ta pore kaj kore nai tai explore getelement by class name nice niye asechi
+
+        // explore getElementByClassname
+
+        const blogs = document.getElementsByClassName('blog');
+        // console.log(blogs);
+        for (blog of blogs) {
+            blog.style.backgroundColor = 'olive';
+            blog.style.borderRadius = '20px';
+            blog.style.margin = '5px';
+            blog.style.padding = '10px';
+
+            ``
+        }
+    </script>
+
+</body>
+
+</html>
